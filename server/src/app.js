@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
-import userRoute from "./routes/user/routes.js"
+import userRoute from "./routes/user.routes.js"
+import productRoute from "./routes/product.routes.js"
 
 
 const app = express();
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/user", userRoute);
+app.use("/api/product", productRoute);
 
 export default app;
 

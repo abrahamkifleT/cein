@@ -4,7 +4,8 @@ import helmet from "helmet"
 import morgan from "morgan"
 import userRoute from "./routes/user.routes.js"
 import productRoute from "./routes/product.routes.js"
-
+import categoryRoute from "./routes/category.routes.js"
+import collectionRoute from "./routes/collection.routes.js"
 
 const app = express();
 
@@ -20,6 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
+app.use("/api/category", categoryRoute);
+app.use("/api/collection", collectionRoute);
 
 export default app;
 

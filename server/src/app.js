@@ -6,6 +6,7 @@ import userRoute from "./routes/user.routes.js"
 import productRoute from "./routes/product.routes.js"
 import categoryRoute from "./routes/category.routes.js"
 import collectionRoute from "./routes/collection.routes.js"
+import variantRoute from "./routes/variant.routes.js"
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use("/api/user", userRoute);
 app.use("/api/product", productRoute);
 app.use("/api/category", categoryRoute);
 app.use("/api/collection", collectionRoute);
+app.use("/api/variant", variantRoute)
 
 export default app;
 

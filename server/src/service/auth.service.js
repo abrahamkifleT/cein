@@ -3,8 +3,8 @@ import bcrypt from "bcryptjs"
 import { generateToken } from "../utils/generateToken.js"
 
 export const registerUserService = async (data) => {
-    const existingUser = await User.findOne({email: data.email});
-    if(existingUser){
+    const existingUser = await User.findOne({ email: data.email });
+    if (existingUser) {
         throw new Error("User already exisist")
     }
 
@@ -13,22 +13,22 @@ export const registerUserService = async (data) => {
     const user = await User.create({
         name: data.name,
         email: data.email,
-        password: data.password,
+        password: hashedPassword,
     })
 
     const token = generateToken(user._id);
-    return {user, token}
+    return { user, token }
 }
 
-export const loginUserService = async(data) => {
-    const user = await User.findOne({email: data.email})
+export const loginUserService = async (data) => {
+    const user = await User.findOne({ email: data.email })
 
-    if(!user){
+    if (!user) {
         throw new Error("Invalid email")
     }
 
     const isMatch = await bcrypt.compare(data.password, user.password);
-    if(isMatch){
+    if (!isMatch) {
         throw Error("Invalid password")
     }
 

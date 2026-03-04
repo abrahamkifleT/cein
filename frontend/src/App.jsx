@@ -2,11 +2,11 @@ import React from 'react';
 import Header from './components/layout/Header';
 import Navbar from './components/layout/Navbar';
 import AppRoutes from './app/routes';
-import { ProductContextProvider } from './context/product.context';
+import AppProvider from './providers/AppProvider';
 
 function App() {
   return (
-    <ProductContextProvider>
+    <AppProvider>
       <div className="app">
       <Header />
       <Navbar />
@@ -20,7 +20,7 @@ function App() {
         </div>
       </footer>
     </div>
-    </ProductContextProvider>
+    </AppProvider>
   );
 }
 

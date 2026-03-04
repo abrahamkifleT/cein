@@ -1,0 +1,37 @@
+.navbar {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.navbar__item a {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--color-black);
+}
+
+.navbar__item--sale a {
+  color: var(--color-sale);
+}
+
+@media (max-width: 1024px) {
+  .navbar__list {
+    gap: 16px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 8px;
+  }
+
+  .navbar__item a {
+    white-space: nowrap;
+  }
+}

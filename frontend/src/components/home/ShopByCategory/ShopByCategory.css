@@ -1,0 +1,106 @@
+.shop-by-category {
+  padding: 40px 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden; /* Prevent section from breaking layout */
+}
+
+.shop-by-category h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Horizontal Scroll Container */
+.category-card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 10px; /* Space for hidden scroll area */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.category-card-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.category-item {
+  flex: 0 0 calc(50% - 8px); /* 2 items on mobile */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Square ratio to reduce height from 3/4 */
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: var(--color-gray-light);
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.category-item:hover .category-image {
+  transform: scale(1.05);
+}
+
+.category-name {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--color-black);
+}
+
+/* Tablet (Small/Medium screen) */
+@media (min-width: 768px) {
+  .shop-by-category {
+    padding: 60px 32px;
+  }
+
+  .shop-by-category h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .category-item {
+    flex: 0 0 calc(33.333% - 16px); /* 3 items */
+  }
+
+  .category-name {
+    font-size: 15px;
+  }
+
+  /* Keep 3/4 but with smaller max-width if preferred? 
+     The user said "reduce height", so switching 3:4 (vertical) to 1:1 (square) or 4:3 (horizontal) 
+     is the best way. I'll stick to 1:1 for a modern look. */
+}
+
+/* Desktop (Large screen) */
+@media (min-width: 1024px) {
+  .shop-by-category {
+    padding: 80px 48px;
+  }
+
+  .category-item {
+    flex: 0 0 calc(25% - 24px); /* 4 items */
+  }
+
+  .category-image-container {
+    max-height: 350px; /* Hard limit for large screens */
+  }
+
+  .category-name {
+    font-size: 16px;
+  }
+}

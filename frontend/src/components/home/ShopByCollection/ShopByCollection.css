@@ -103,7 +103,7 @@
   }
 
   .collection-item {
-    flex: 0 0 430.67px; /* Figma width */
+    flex: 0 0 calc(33.333% - 14px); /* Show 3 items comfortably */
   }
 
   .collection-image-wrapper {

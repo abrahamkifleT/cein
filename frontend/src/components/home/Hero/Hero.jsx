@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../ui/Button/Button';
 import './Hero.css';
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
                         Get peak comfy-chic <br />
                         with new winter essentials.
                     </p>
-                    <button className="hero__cta">SHOP NOW</button>
+                    <Button name="SHOP NOW" className="hero__cta" />
                 </div>
 
                 <div className="hero__pagination">

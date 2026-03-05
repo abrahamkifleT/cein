@@ -1,0 +1,116 @@
+.shop-by-collection {
+  padding: 40px 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.collection-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.collection-row::-webkit-scrollbar {
+  display: none;
+}
+
+.collection-item {
+  flex: 0 0 70%; /* Reduced from 85% */
+  position: relative;
+}
+
+.collection-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Reduced height by changing from 4/5 to 1/1 square */
+  overflow: hidden;
+  background-color: var(--color-gray-light);
+}
+
+.collection-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.collection-item:hover .collection-image {
+  transform: scale(1.03);
+}
+
+.collection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Slightly darker for label readability on square images */
+  gap: 12px;
+  text-align: center;
+  padding: 16px;
+}
+
+.collection-label {
+  color: var(--color-white);
+  font-size: 18px; /* Slightly smaller for smaller containers */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.collection-btn {
+  min-width: 150px; /* Reduced min-width */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .shop-by-collection {
+    padding: 60px 32px;
+  }
+
+  .collection-row {
+    gap: 20px;
+  }
+
+  .collection-item {
+    flex: 0 0 340px; /* Medium screen width */
+  }
+
+  .collection-label {
+    font-size: 22px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .shop-by-collection {
+    padding: 60px 48px;
+  }
+
+  .collection-item {
+    flex: 0 0 430.67px; /* Figma width */
+  }
+
+  .collection-image-wrapper {
+    max-height: 534px; /* Figma height */
+  }
+
+  .collection-label {
+    font-size: 28px;
+  }
+}

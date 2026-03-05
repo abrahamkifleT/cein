@@ -13,6 +13,7 @@ const products = [
     isNew: true,
     isTrending: true,
     isBestSeller: false,
+    isFavorite: true,
   },
   {
     _id: "prod2",
@@ -28,6 +29,7 @@ const products = [
     isNew: false,
     isTrending: false,
     isBestSeller: true,
+    isFavorite: true,
   },
   {
     _id: "prod3",
@@ -43,6 +45,7 @@ const products = [
     isNew: true,
     isTrending: true,
     isBestSeller: true,
+    isFavorite: true,
   },
   {
     _id: "prod4",
@@ -58,6 +61,7 @@ const products = [
     isNew: false,
     isTrending: true,
     isBestSeller: false,
+    isFavorite: false,
   },
   {
     _id: "prod5",
@@ -73,6 +77,7 @@ const products = [
     isNew: true,
     isTrending: true,
     isBestSeller: false,
+    isFavorite: false,
   },
   {
     _id: "prod6",
@@ -88,6 +93,7 @@ const products = [
     isNew: false,
     isTrending: true,
     isBestSeller: true,
+    isFavorite: false,
   },
   {
     _id: "prod7",
@@ -103,6 +109,7 @@ const products = [
     isNew: false,
     isTrending: false,
     isBestSeller: true,
+    isFavorite: true,
   },
   {
     _id: "prod8",
@@ -118,6 +125,7 @@ const products = [
     isNew: true,
     isTrending: false,
     isBestSeller: false,
+    isFavorite: true,
   },
 ];
 

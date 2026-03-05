@@ -1,5 +1,5 @@
 .shop-by-category {
-  padding: 40px 16px 20px 16px;
+  padding: 40px 10px 20px 10px;
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden; /* Prevent section from breaking layout */
@@ -65,7 +65,7 @@
 /* Tablet (Small/Medium screen) */
 @media (min-width: 768px) {
   .shop-by-category {
-    padding: 60px 32px 30px 32px;
+    padding: 60px 20px 30px 20px;
   }
 
   .shop-by-category h2 {
@@ -89,7 +89,7 @@
 /* Desktop (Large screen) */
 @media (min-width: 1024px) {
   .shop-by-category {
-    padding: 80px 48px 40px 48px;
+    padding: 80px 24px 40px 24px;
   }
 
   .category-item {

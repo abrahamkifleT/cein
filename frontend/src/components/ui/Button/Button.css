@@ -1,0 +1,40 @@
+.btn {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  padding: 10px 16px; /* Slightly reduced horizontal padding */
+  font-size: clamp(10px, 2vw, 13px); /* Fluid font size that scales down */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Medium screen */
+@media (min-width: 768px) {
+  .btn {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+}
+
+/* Large screen */
+@media (min-width: 1024px) {
+  .btn {
+    padding: 14px 36px;
+    font-size: 15px;
+  }
+}

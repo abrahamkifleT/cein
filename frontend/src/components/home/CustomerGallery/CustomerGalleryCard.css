@@ -1,0 +1,63 @@
+/* Outer clipping viewport — only 5 cards wide visible at a time */
+.customer-gallery-viewport {
+  overflow: hidden;
+  width: calc(225.6px * 5 + 16px * 4); /* 5 cards + 4 gaps */
+  max-width: 100%;
+}
+
+/* Inner sliding track — all cards in one long row */
+.customer-gallery-track {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 2rem 0;
+  /* width is set by its children */
+}
+
+.customer-gallery-card-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 225.6px;
+  height: 225px;
+}
+
+.customer-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.customer-gallery-chart-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 1024px) {
+  .customer-gallery-viewport {
+    width: calc(200px * 4 + 16px * 3);
+  }
+  .customer-gallery-card-item {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .customer-gallery-viewport {
+    width: calc(160px * 3 + 16px * 2);
+  }
+  .customer-gallery-card-item {
+    width: 160px;
+    height: 160px;
+  }
+}

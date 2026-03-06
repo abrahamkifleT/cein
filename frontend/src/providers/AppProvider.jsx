@@ -3,6 +3,7 @@ import { ProductContextProvider } from '../context/product.context'
 import { CollectionContextProvider } from '../context/collection.context'
 import { TestimonialProvider } from '../context/testimonials.context'
 import { BlogPostProvider } from '../context/blogpost.context'
+import { CustomerGalleryProvider } from '../context/customerGallery.context'
 
 const AppProvider = ({ children }) => {
     return (
@@ -10,7 +11,9 @@ const AppProvider = ({ children }) => {
             <CollectionContextProvider>
                 <TestimonialProvider>
                     <BlogPostProvider>
-                        {children}
+                        <CustomerGalleryProvider>
+                            {children}
+                        </CustomerGalleryProvider>
                     </BlogPostProvider>
                 </TestimonialProvider>
             </CollectionContextProvider>

@@ -6,6 +6,8 @@ import Favorites from '../../components/home/Favorites/Favorites';
 import LearnMore from '../../components/home/LearnMore/LearnMore';
 import Testimonials from '../../components/home/Testimonials/Testimonials';
 import SomeBlogPost from '../../components/home/SomeBlogPost/SomeBlogPost';
+import CustomerGallery from '../../components/home/CustomerGallery/CustomerGallery';
+import FeatureSection from '../../components/home/FeatureSection/FeatureSection';
 
 const Home = () => {
     return (
@@ -17,6 +19,8 @@ const Home = () => {
             <Favorites />
             <Testimonials />
             <SomeBlogPost />
+            <CustomerGallery />
+            <FeatureSection />
         </div>
     );
 };

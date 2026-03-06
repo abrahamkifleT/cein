@@ -1,6 +1,5 @@
-import { useContext } from "react";
-import { CustomerGalleryProvider } from "../context/customerGallery.context";
+import { useCustomerGallery as useCustomerGalleryContext } from "../context/customerGallery.context";
 
 export const useCustomerGallery = () => {
-    return useContext(CustomerGalleryProvider)
+    return useCustomerGalleryContext();
 }

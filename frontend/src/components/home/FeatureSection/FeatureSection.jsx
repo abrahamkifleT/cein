@@ -13,15 +13,17 @@ const featureData = [
 
 const FeatureSection = () => {
     return (
-        <div className="feature-section-container">
-            {featureData.map((item, index) => (
-                <FeatureSectionCard
-                    key={index}
-                    image={item.image}
-                    title={item.title}
-                    description={item.description}
-                />
-            ))}
+        <div className="feature-section-wrapper">
+            <div className="feature-section-container">
+                {featureData.map((item, index) => (
+                    <FeatureSectionCard
+                        key={index}
+                        image={item.image}
+                        title={item.title}
+                        description={item.description}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

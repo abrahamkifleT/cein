@@ -9,7 +9,7 @@ const SomeBlogPostCard = () => {
 
     return (
         <>
-            <br />
+            <div style={{ width: '90%', height: '1px', backgroundColor: 'black', margin: '2rem auto' }} />
             <div className="blog-post-card-container">
                 {displayPosts.map((blog, index) => (
                     <div key={blog._id} className="blog-post-card">
@@ -22,7 +22,7 @@ const SomeBlogPostCard = () => {
                     </div>
                 ))}
             </div>
-            <br />
+            <div style={{ width: '90%', height: '2px', backgroundColor: 'black', margin: '2rem auto' }} />
         </>
     )
 }

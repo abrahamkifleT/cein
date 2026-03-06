@@ -3,6 +3,7 @@ import Header from './components/layout/Header';
 import Navbar from './components/layout/Navbar';
 import AppRoutes from './app/routes';
 import AppProvider from './providers/AppProvider';
+import Footer from './components/home/Footer/Footer';
 
 function App() {
   return (
@@ -14,11 +15,7 @@ function App() {
         <AppRoutes />
       </main>
 
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; 2026 EVERLANE. For demonstration purposes.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
     </AppProvider>
   );

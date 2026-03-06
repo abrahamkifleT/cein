@@ -8,6 +8,7 @@ import Testimonials from '../../components/home/Testimonials/Testimonials';
 import SomeBlogPost from '../../components/home/SomeBlogPost/SomeBlogPost';
 import CustomerGallery from '../../components/home/CustomerGallery/CustomerGallery';
 import FeatureSection from '../../components/home/FeatureSection/FeatureSection';
+import Footer from '../../components/home/Footer/Footer';
 
 const Home = () => {
     return (

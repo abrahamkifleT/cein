@@ -1,0 +1,55 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 411.33px;
+  height: 157px;
+  justify-content: center;
+}
+
+/* Large screen: 78x78 as per Figma */
+.feature-card-image {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.feature-card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.feature-card-description {
+  font-size: 0.875rem;
+  color: #888; /* grey text as per design */
+  line-height: 1.5;
+}
+
+/* Medium screen */
+@media screen and (max-width: 1024px) {
+  .feature-card {
+    width: 320px;
+    height: auto;
+  }
+  .feature-card-image {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* Small screen */
+@media screen and (max-width: 768px) {
+  .feature-card {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+  .feature-card-image {
+    width: 52px;
+    height: 52px;
+  }
+}

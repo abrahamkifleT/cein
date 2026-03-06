@@ -22,7 +22,7 @@ const CustomerGallery = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', margin: '4rem 0' }}>
+    <div style={{ textAlign: 'center', marginTop: '4rem', marginBottom: '0' }}>
       <h3>Everlane On You</h3>
       <p style={{ marginBottom: '1rem' }}>Share your latest look with #EverlaneOnYou for a chance to be featured.</p>
       <p><span style={{ textDecoration: 'underline', cursor: 'pointer', fontWeight: 500 }}>Add Your Photo</span></p>

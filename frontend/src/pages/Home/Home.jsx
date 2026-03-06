@@ -5,6 +5,7 @@ import ShopByCollection from '../../components/home/ShopByCollection/ShopByColle
 import Favorites from '../../components/home/Favorites/Favorites';
 import LearnMore from '../../components/home/LearnMore/LearnMore';
 import Testimonials from '../../components/home/Testimonials/Testimonials';
+import SomeBlogPost from '../../components/home/SomeBlogPost/SomeBlogPost';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <LearnMore />
             <Favorites />
             <Testimonials />
+            <SomeBlogPost />
         </div>
     );
 };

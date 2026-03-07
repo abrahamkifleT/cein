@@ -1,27 +1,15 @@
 import collections from "../data/collections";
 
 export const getAllCollections = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(collections);
-        }, 500);
-    });
+    return collections;
 }
 
 export const getCollectionById = (id) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(collections.find((collection) => collection._id === id));
-        }, 500);
-    });
+    return collections.find((collection) => collection._id === id);
 }
 
 export const getCollectionByName = (name) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(collections.find((collection) => collection.name === name));
-        }, 500);
-    });
+    return collections.find((collection) => collection.name === name);
 }
 
 

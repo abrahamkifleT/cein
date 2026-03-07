@@ -8,10 +8,9 @@ export const BlogPostProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        getAllBlogPosts().then((data) => {
-            setBlogPosts(data);
-            setLoading(false);
-        });
+        const data = getAllBlogPosts();
+        setBlogPosts(data);
+        setLoading(false);
     }, []);
 
     return (

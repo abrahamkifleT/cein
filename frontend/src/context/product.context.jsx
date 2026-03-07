@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getAllProducts } from "../services/product.Service";
+import { getAllProducts } from "../services/product.service";
 
 const ProductContext = createContext();
 
@@ -9,10 +9,14 @@ export const ProductContextProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        getAllProducts()
-            .then((products) => setProducts(products))
-            .finally(() => setLoading(false))
-            .catch((error) => setError(error));
+        try {
+            const data = getAllProducts();
+            setProducts(data);
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
     }, []);
 
     return (

@@ -9,9 +9,9 @@ export const CustomerGalleryProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchcutomerGallery = async () => {
+        const fetchcutomerGallery = () => {
             try {
-                const data = await getAllCustomerGallery();
+                const data = getAllCustomerGallery();
                 setCustomerGallery(data)
             } catch (error) {
                 setError(error)

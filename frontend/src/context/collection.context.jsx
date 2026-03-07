@@ -9,9 +9,9 @@ export const CollectionContextProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchCollections = async () => {
+        const fetchCollections = () => {
             try {
-                const data = await getAllCollections();
+                const data = getAllCollections();
                 setCollections(data);
             } catch (error) {
                 setError(error);

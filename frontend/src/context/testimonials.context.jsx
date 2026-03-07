@@ -17,10 +17,10 @@ export const TestimonialProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const fetchTestimonials = async () => {
+        const fetchTestimonials = () => {
             try {
                 setLoading(true);
-                const data = await getAllTestimonials();
+                const data = getAllTestimonials();
 
                 // Join user data
                 const enrichedData = data.map(testimonial => {
